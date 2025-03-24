@@ -37,30 +37,28 @@
             beauty of the world through my lens and building creative solutions on the web.</p>
     </section>
 
-    <!-- Gallery Section -->
     <section id="gallery">
         <h2>Gallery</h2>
         <div class="gallery">
-            <!-- Image container with captions -->
             <div class="gallery-item">
                 <img src="images/image1.jpg" alt="Photo 1">
-                <p>Photo 1 - Stunning Landscape</p> <!-- Added caption -->
+                <p>Photo 1 - Stunning Landscape</p>
             </div>
             <div class="gallery-item">
                 <img src="images/image2.jpg" alt="Photo 2">
-                <p>Photo 2 - Urban Vibes</p> <!-- Added caption -->
+                <p>Photo 2 - Urban Vibes</p>
             </div>
             <div class="gallery-item">
                 <img src="images/image3.jpg" alt="Photo 3">
-                <p>Photo 3 - Serene Nature</p> <!-- Added caption -->
+                <p>Photo 3 - Serene Nature</p>
             </div>
             <div class="gallery-item">
                 <img src="images/image4.jpg" alt="Photo 4">
-                <p>Photo 4 - Night Lights</p> <!-- Added caption -->
+                <p>Photo 4 - Night Lights</p>
             </div>
-            <!-- Add more images as needed -->
         </div>
     </section>
+
 
     <!-- Contact Section -->
     <section id="contact">
@@ -80,7 +78,33 @@
         <p>&copy; 2025 Adedeji's Portfolio. Designed with ❤️.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Modal Section -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Modal functionality for gallery images
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-img");
+        const captionText = document.getElementById("caption");
+        const images = document.querySelectorAll(".gallery-item img");
+
+        images.forEach((img) => {
+            img.onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            };
+        });
+
+        const span = document.getElementsByClassName("close")[0];
+        span.onclick = function () {
+            modal.style.display = "none";
+        };
+    </script>
 </body>
 
 </html>
