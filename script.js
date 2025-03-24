@@ -1,17 +1,42 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll(".hidden");
+// Welcome message based on time of day
+const welcomeMessage = document.getElementById('welcome-message');
+const hours = new Date().getHours();
+if (hours < 12) {
+    welcomeMessage.textContent = 'Good Morning! Welcome to Adedeji\'s World!';
+} else if (hours < 18) {
+    welcomeMessage.textContent = 'Good Afternoon! Welcome to Adedeji\'s World!';
+} else {
+    welcomeMessage.textContent = 'Good Evening! Welcome to Adedeji\'s World!';
+}
 
-    const revealSection = () => {
-        sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
+// Populate the gallery dynamically
+const gallery = document.querySelector('.gallery');
+const imageCount = 6; // Set the number of images you want in the gallery
+for (let i = 1; i <= imageCount; i++) {
+    const galleryItem = document.createElement('div');
+    galleryItem.classList.add('gallery-item');
 
-            if (sectionTop < windowHeight - 100) {
-                section.classList.add("show");
-            }
+    const img = document.createElement('img');
+    img.src = `images/image${i}.jpg`; // Make sure your image files follow this naming convention
+    img.alt = `Photo ${i}`;
+
+    galleryItem.appendChild(img);
+    gallery.appendChild(galleryItem);
+}
+
+// Lightbox functionality for gallery images
+document.body.addEventListener('click', (e) => {
+    if (e.target.tagName === 'IMG' && e.target.closest('.gallery-item')) {
+        const lightbox = document.createElement('div');
+        lightbox.classList.add('lightbox');
+        document.body.appendChild(lightbox);
+
+        const img = document.createElement('img');
+        img.src = e.target.src;
+        lightbox.appendChild(img);
+
+        lightbox.addEventListener('click', () => {
+            lightbox.remove();
         });
-    };
-
-    window.addEventListener("scroll", revealSection);
-    revealSection(); // Run once on load
+    }
 });
