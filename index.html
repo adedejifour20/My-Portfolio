@@ -4,85 +4,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Adedeji's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #007BFF;
+        }
+
+        section {
+            padding: 2rem;
+            margin: 1rem auto;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        #contact iframe {
+            width: 100%;
+            height: 520px;
+            border: none;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
-
-    <!-- Navigation -->
+    <header>
+        <h1>Welcome to Adedeji's Portfolio</h1>
+        <p>A showcase of my photography and web development projects</p>
+    </header>
     <nav>
-        <ul>
-            <li><a href="#music">Music</a></li>
-            <li><a href="#coding">Coding</a></li>
-            <li><a href="#photography">Photography</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <a href="#about">About Me</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact Me</a>
     </nav>
-
-    <!-- Music Section -->
-    <section id="music" class="hidden">
-        <h2>My Music</h2>
-        <p>Check out my beats:</p>
-        <div class="music-player">
-            <audio controls>
-                <source src="music/beat1.mp3" type="audio/mpeg">
-            </audio>
-            <audio controls>
-                <source src="music/beat2.mp3" type="audio/mpeg">
-            </audio>
-        </div>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! My name is Adedeji. I’m a passionate photographer and aspiring web developer. I love capturing the
+            beauty of the world through my lens and building creative solutions on the web.</p>
     </section>
-
-    <!-- Coding Projects Section -->
-    <section id="coding" class="hidden">
-        <h2>My Coding Projects</h2>
-        <p>Coming soon...</p>
-    </section>
-
-    <!-- Photography Section -->
-    <section id="photography" class="hidden">
+    <section id="gallery">
         <h2>My Photography</h2>
-        <div class="gallery">
-            <a href="images/photo1.jpg" target="_blank"><img src="images/photo1.jpg" alt="Photo 1"></a>
-            <a href="images/photo2.jpg" target="_blank"><img src="images/photo2.jpg" alt="Photo 2"></a>
-            <a href="images/photo3.jpg" target="_blank"><img src="images/photo3.jpg" alt="Photo 3"></a>
-        </div>
+        <p>Gallery coming soon...</p>
     </section>
-
-    <!-- Contact Form -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <form id="contact-form" action="https://formsubmit.co/68bf441a8ace9fba1fca9815ccc160f2" method="POST">
-            <!-- Hidden Fields -->
-            <input type="hidden" name="_subject" value="New Contact Form Message">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_replyto" value="adekiigbeadedeji10@gmail.com">
-
-            <!-- Input Fields -->
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLScQ7x7gbw2Q6WQ66rYvPVhzOSNbQzzUm4WNQmghP9-O-R9c3A/viewform?embedded=true"
+            width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">
+            Loading…
+        </iframe>
     </section>
-
-    <!-- Instagram Link -->
-    <section id="socials">
-        <h2>Follow Me</h2>
-        <a href="https://www.instagram.com/adedejisworld/" target="_blank" rel="noopener noreferrer">
-            <img src="images/instagram-icon.png" alt="Instagram" class="social-icon">
-        </a>
-    </section>
-
-    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2025 Adedeji's Portfolio</p>
+        <p>Follow me on <a href="https://www.instagram.com/adedejisworld/" target="_blank">Instagram</a></p>
+    </footer>
 </body>
 
 </html>
