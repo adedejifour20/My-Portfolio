@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#coding">Coding</a></li>
+            <li><a href="#photography">Photography</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Music Section -->
+    <section id="music" class="hidden">
+        <h2>My Music</h2>
+        <p>Check out my beats:</p>
+        <div class="music-player">
+            <audio controls>
+                <source src="music/beat1.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="music/beat2.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </section>
+
+    <!-- Coding Projects Section -->
+    <section id="coding" class="hidden">
+        <h2>My Coding Projects</h2>
+        <p>Coming soon...</p>
+    </section>
+
+    <!-- Photography Section -->
+    <section id="photography" class="hidden">
+        <h2>My Photography</h2>
+        <div class="gallery">
+            <a href="images/photo1.jpg" target="_blank"><img src="images/photo1.jpg" alt="Photo 1"></a>
+            <a href="images/photo2.jpg" target="_blank"><img src="images/photo2.jpg" alt="Photo 2"></a>
+            <a href="images/photo3.jpg" target="_blank"><img src="images/photo3.jpg" alt="Photo 3"></a>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form" action="https://formsubmit.co/YOUR_EMAIL" method="POST">
+            <input type="hidden" name="_subject" value="New Contact Form Message">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Instagram Link -->
+    <section id="socials">
+        <h2>Follow Me</h2>
+        <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank">
+            <img src="images/instagram-icon.png" alt="Instagram" class="social-icon">
+        </a>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
