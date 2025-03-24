@@ -6,77 +6,98 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
+    color: #333;
+    background: #f4f4f9;
 }
 
 header {
-    background: #333;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    padding: 1rem 2rem;
 }
 
-header h1 {
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    color: #fff;
     font-size: 1.5rem;
+    font-weight: bold;
 }
 
-nav ul {
+.nav-links {
     list-style: none;
-    padding: 0;
+    display: flex;
+    gap: 1rem;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: white;
+.nav-links li a {
+    color: #fff;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-section {
-    padding: 20px;
-    margin: 20px;
+.nav-links li a:hover {
+    color: #ffc107;
 }
 
-section h2 {
+.section {
+    padding: 2rem;
     text-align: center;
-    margin-bottom: 20px;
 }
 
-#about {
-    background: #f4f4f4;
-    text-align: center;
+.section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.section p {
+    font-size: 1.2rem;
+    color: #555;
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-.gallery-item {
-    flex: 1 1 calc(33.333% - 20px);
-    max-width: calc(33.333% - 20px);
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    text-align: center;
-    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .gallery-item img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 footer {
-    text-align: center;
-    padding: 10px 0;
     background: #333;
-    color: white;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer .social-icons {
+    margin-top: 0.5rem;
+}
+
+footer .social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #ffc107;
 }
