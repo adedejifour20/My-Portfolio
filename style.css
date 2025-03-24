@@ -1,3 +1,10 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -7,9 +14,13 @@ body {
 
 header {
     background: #333;
-    color: #fff;
-    padding: 1rem 0;
+    color: white;
+    padding: 10px 20px;
     text-align: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
 }
 
 nav ul {
@@ -23,32 +34,49 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
 }
 
 section {
-    padding: 2rem;
+    padding: 20px;
+    margin: 20px;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#about {
+    background: #f4f4f4;
     text-align: center;
 }
 
-.image-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
-.image-gallery img {
-    width: 100%;
+.gallery-item {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 10px;
+}
+
+.gallery-item img {
+    max-width: 100%;
     height: auto;
-    border: 2px solid #ddd;
-    border-radius: 8px;
 }
 
 footer {
-    background: #333;
-    color: #fff;
     text-align: center;
-    padding: 1rem 0;
+    padding: 10px 0;
+    background: #333;
+    color: white;
 }
