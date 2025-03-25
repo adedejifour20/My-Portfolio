@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adedeji's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -37,32 +39,17 @@
             beauty of the world through my lens and building creative solutions on the web.</p>
     </section>
 
+    <!-- Gallery Section -->
     <section id="gallery">
         <h2>Gallery</h2>
         <div class="gallery">
-            <div class="gallery-item">
-                <img src="images/image1.jpg" alt="Photo 1">
-                <p>Photo 1 - Stunning Landscape</p>
-            </div>
-            <div class="gallery-item">
-                <img src="images/image2.jpg" alt="Photo 2">
-                <p>Photo 2 - Urban Vibes</p>
-            </div>
-            <div class="gallery-item">
-                <img src="images/image3.jpg" alt="Photo 3">
-                <p>Photo 3 - Serene Nature</p>
-            </div>
-            <div class="gallery-item">
-                <img src="images/image4.jpg" alt="Photo 4">
-                <p>Photo 4 - Night Lights</p>
-            </div>
+            <!-- Gallery images will be dynamically populated -->
         </div>
     </section>
 
-
     <!-- Contact Section -->
     <section id="contact">
-        <h2 class="contact-title">Contact Me</h2> <!-- Added class for title styling -->
+        <h2 class="contact-title">Contact Me</h2>
         <p>If you'd like to work with me or leave feedback, use the form below.</p>
         <div class="form-container">
             <iframe
@@ -73,38 +60,20 @@
         </div>
     </section>
 
-    <!-- Added Footer Section -->
+    <!-- Footer Section -->
     <footer>
+        <div class="social-media">
+            <a href="https://www.instagram.com/adedejisworld/" target="_blank">
+                <img src="images/instagram.png" alt="❤️Instagram❤️" class="social-icon">
+            </a>
+        </div>
         <p>&copy; 2025 Adedeji's Portfolio. Designed with ❤️.</p>
     </footer>
 
-    <!-- Modal Section -->
-    <div id="modal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modal-img">
-        <div id="caption"></div>
-    </div>
 
-    <script>
-        // Modal functionality for gallery images
-        const modal = document.getElementById("modal");
-        const modalImg = document.getElementById("modal-img");
-        const captionText = document.getElementById("caption");
-        const images = document.querySelectorAll(".gallery-item img");
-
-        images.forEach((img) => {
-            img.onclick = function () {
-                modal.style.display = "block";
-                modalImg.src = this.src;
-                captionText.innerHTML = this.alt;
-            };
-        });
-
-        const span = document.getElementsByClassName("close")[0];
-        span.onclick = function () {
-            modal.style.display = "none";
-        };
-    </script>
+    <!-- Lightbox Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

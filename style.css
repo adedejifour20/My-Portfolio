@@ -43,7 +43,7 @@ header nav a:hover {
     color: white;
 }
 
-.hero h2 {
+.hero h1 {
     font-size: 3rem;
     margin-bottom: 15px;
 }
@@ -70,25 +70,103 @@ header nav a:hover {
     font-size: 1rem;
 }
 
-/* Updated Gallery Styles */
-.gallery-item {
-    width: 300px;
-    /* Adjust as needed */
-    height: 200px;
-    /* Adjust as needed */
-    overflow: hidden;
-    border-radius: 8px;
+/* Gallery Section */
+#gallery {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
 }
 
 .gallery-item img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
-    /* Show the full image without cropping */
-    background-color: #f9f9f9;
-    /* Add a subtle background color for padding effect */
+    height: auto;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-text-align: center;
-padding: 50px 20px;
-background-color: #fff;
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contact form input,
+#contact form textarea,
+#contact form button {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact form button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+#contact form button:hover {
+    background-color: #f9c74f;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Social Media Icon Styles */
+.social-media {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}

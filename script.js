@@ -11,13 +11,13 @@ if (hours < 12) {
 
 // Populate the gallery dynamically
 const gallery = document.querySelector('.gallery');
-const imageCount = 6; // Set the number of images you want in the gallery
+const imageCount = 6; // Adjust the number of images in the gallery
 for (let i = 1; i <= imageCount; i++) {
     const galleryItem = document.createElement('div');
     galleryItem.classList.add('gallery-item');
 
     const img = document.createElement('img');
-    img.src = `images/image${i}.jpg`; // Make sure your image files follow this naming convention
+    img.src = `images/image${i}.jpg`; // Ensure the images are named image1.jpg, image2.jpg, etc.
     img.alt = `Photo ${i}`;
 
     galleryItem.appendChild(img);
