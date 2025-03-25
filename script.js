@@ -11,7 +11,7 @@ if (hours < 12) {
 
 // Populate the gallery dynamically
 const gallery = document.querySelector('.gallery');
-const imageCount = 66; // Adjust the number of images in the gallery
+const imageCount = 53; // Adjust the number of images in the gallery
 for (let i = 1; i <= imageCount; i++) {
     const galleryItem = document.createElement('div');
     galleryItem.classList.add('gallery-item');
