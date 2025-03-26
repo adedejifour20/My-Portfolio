@@ -63,11 +63,11 @@ const testimonialsContainer = document.querySelector('.testimonials-container');
 const newTestimonials = [
     {
         text: "Adedeji's work speaks for itself. Every shot captures the essence of the moment.",
-        author: "Emily Rose"
+        author: "Shaki Abosede"
     },
     {
-        text: "I highly recommend Adedeji for his professionalism and artistic talent.",
-        author: "Michael Johnson"
+        text: "I highly recommend Adedeji Shot it for his professionalism and artistic talent.",
+        author: "Alatishe Fathia"
 
     }
 ];
