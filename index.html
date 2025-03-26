@@ -8,6 +8,25 @@
     <link rel="stylesheet" href="style.css">
     <!-- Lightbox CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Welcome to Adedeji's Portfolio. A professional photographer capturing stunning moments and creating magic through the lens.">
+    <meta name="keywords" content="photography, portfolio, Adedeji, photo gallery, creative photography, web developer">
+    <meta name="author" content="Adedeji">
+    <meta property="og:title" content="Adedeji's Portfolio">
+    <meta property="og:description"
+        content="Capture memories and create stories through Adedeji's lens. Explore the portfolio today.">
+    <meta property="og:image" content="images/preview-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'YOUR_TRACKING_ID');
+    </script>
 </head>
 
 <body>
@@ -20,6 +39,7 @@
                     <a href="#home">Home</a>
                     <a href="#about">About Me</a>
                     <a href="#gallery">Gallery</a>
+                    <a href="#testimonials">Testimonials</a>
                     <a href="#contact">Contact</a>
                 </nav>
             </div>
@@ -37,6 +57,7 @@
         <h2>About Me</h2>
         <p>Hello! My name is Adedeji. I'm a passionate photographer and aspiring web developer. I love capturing the
             beauty of the world through my lens and building creative solutions on the web.</p>
+        <a href="portfolio.pdf" download class="button">Download My Portfolio</a>
     </section>
 
     <!-- Gallery Section -->
@@ -47,25 +68,68 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>What People Say</h2>
+        <div class="testimonials-container">
+            <blockquote>
+                <p>"Adedeji has an incredible eye for detail. The photos he captured were simply stunning!"</p>
+                <cite>- Jane Doe</cite>
+            </blockquote>
+            <blockquote>
+                <p>"Working with Adedeji was a breeze. The end results exceeded all my expectations."</p>
+                <cite>- John Smith</cite>
+            </blockquote>
+        </div>
+    </section>
+
     <section id="contact">
         <h2 class="contact-title">Contact Me</h2>
         <p>If you'd like to work with me or leave feedback, use the form below.</p>
         <div class="form-container">
-            <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLScQ7x7gbw2Q6WQ66rYvPVhzOSNbQzzUm4WNQmghP9-O-R9c3A/viewform?embedded=true"
-                width="100%" height="520" frameborder="0" marginheight="0" marginwidth="0">
-                Loading…
-            </iframe>
+            <div class="container">
+                <form target="_blank" action="https://formsubmit.co/adekiigbeadedeji10@gmail.com" method="POST">
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                            </div>
+                            <div class="col">
+                                <input type="email" name="email" class="form-control" placeholder="Email Address"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required>
+                        </textarea>
+                    </div>
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next"
+                        value="https://adedejifour20.github.io/My-Portfolio/thank-you.html">
+                    <input type="hidden" name="_template" value="table">
+                    <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
+                </form>
+            </div>
         </div>
     </section>
 
+    </div>
+    <div class="social-media">
+        <a href="https://www.instagram.com/adedejisworld/" target="_blank">
+            <img src="images/instagram-icon.png" alt="Instagram">
+        </a>
+        <a href="https://twitter.com/" target="_blank">
+            <img src="images/twitter-icon.png" alt="Twitter">
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank">
+            <img src="images/linkedin-icon.png" alt="LinkedIn">
+        </a>
+    </div>
+    </section>
+
+    <!-- Footer Section -->
     <footer>
-        <div class="social-media">
-            <a href="https://www.instagram.com/adedejisworld/" target="_blank">
-                📸 Instagram
-            </a>
-        </div>
         <p>&copy; 2025 Adedeji's Portfolio. Designed with ❤️.</p>
     </footer>
 

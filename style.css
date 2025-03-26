@@ -70,6 +70,22 @@ header nav a:hover {
     font-size: 1rem;
 }
 
+#about .button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#about .button:hover {
+    background-color: #f9c74f;
+}
+
 /* Gallery Section */
 #gallery {
     padding: 50px 20px;
@@ -89,22 +105,46 @@ header nav a:hover {
     border-radius: 5px;
 }
 
-/* Lightbox */
-.lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Testimonials Section */
+#testimonials {
+    padding: 50px 20px;
+    background-color: #f9f3ed;
+    color: #333;
+    text-align: center;
 }
 
-.lightbox img {
-    max-width: 90%;
-    max-height: 90%;
+#testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+blockquote {
+    max-width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-style: italic;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+blockquote p {
+    font-size: 1rem;
+    color: #555;
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #333;
 }
 
 /* Contact Section */
@@ -142,14 +182,6 @@ header nav a:hover {
     background-color: #f9c74f;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #333;
-    color: #fff;
-}
-
 /* Social Media Icon Styles */
 .social-media {
     text-align: center;
@@ -169,4 +201,57 @@ footer {
 
 .social-icon:hover {
     transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav {
+        flex-wrap: wrap;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonials-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    /* Fix it in the viewport */
+    top: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Offset to truly center */
+    background: rgba(0, 0, 0, 0.8);
+    /* Dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90vw;
+    /* Adjust to fit viewport width */
+    max-height: 90vh;
+    /* Adjust to fit viewport height */
+    border: 3px solid #fff;
+    /* Optional: white border for a cleaner look */
+    border-radius: 10px;
 }
