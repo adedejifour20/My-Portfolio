@@ -1,141 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adedeji's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Lightbox CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
-    <!-- SEO Meta Tags -->
-    <meta name="description"
-        content="Welcome to Adedeji's Portfolio. A professional photographer capturing stunning moments and creating magic through the lens.">
-    <meta name="keywords" content="photography, portfolio, Adedeji, photo gallery, creative photography, web developer">
-    <meta name="author" content="Adedeji">
-    <meta property="og:title" content="Adedeji's Portfolio">
-    <meta property="og:description"
-        content="Capture memories and create stories through Adedeji's lens. Explore the portfolio today.">
-    <meta property="og:image" content="images/preview-image.jpg">
-    <meta property="og:url" content="https://yourwebsite.com">
-    <meta name="twitter:card" content="summary_large_image">
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'YOUR_TRACKING_ID');
-    </script>
+    <title>Deji Digital Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- Navbar -->
+    <!-- Header Section -->
     <header>
-        <nav class="navbar">
-            <div class="container">
-                <a href="#home" class="logo">Adedeji</a>
-                <nav>
-                    <a href="#home">Home</a>
-                    <a href="#about">About Me</a>
-                    <a href="#gallery">Gallery</a>
-                    <a href="#testimonials">Testimonials</a>
-                    <a href="#contact">Contact</a>
-                </nav>
-            </div>
-        </nav>
+        <div class="container">
+            <h1>Deji Digital Solutions</h1>
+            <nav>
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- Dynamic Welcome Section -->
-    <section id="home" class="hero">
-        <h1 id="welcome-message">Welcome to Adedeji's World</h1>
-        <p>Capture memories, tell stories, and create magic through the lens.</p>
-    </section>
-
-    <!-- About Me Section -->
+    <!-- About Section -->
     <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! My name is Adedeji. I'm a passionate photographer and aspiring web developer. I love capturing the
-            beauty of the world through my lens and building creative solutions on the web.</p>
-        <a href="portfolio.pdf" download class="button">Download My Portfolio</a>
+        <h2>About Us</h2>
+        <p>Welcome to Deji Digital Solutions, your trusted partner in creative storytelling and web development. We specialize in delivering visually stunning and effective digital solutions tailored to your needs.</p>
+        <a href="files/Deji_Portfolio.pdf" class="button">Download Portfolio</a>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <div class="gallery">
-            <!-- Gallery images will be dynamically populated -->
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials">
-        <h2>What People Say</h2>
-        <div class="testimonials-container">
-            <blockquote>
-                <p>"Adedeji shot it has an incredible eye for detail. The photos he captured were simply stunning!"</p>
-                <cite>- Olamide Are</cite>
-            </blockquote>
-            <blockquote>
-                <p>"Working with Adedeji was a breeze. The end results exceeded all my expectations."</p>
-                <cite>- Gloria Giwa</cite>
-            </blockquote>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2 class="contact-title">Contact Me</h2>
-        <p>If you'd like to work with me or leave feedback, use the form below.</p>
-        <div class="form-container">
-            <div class="container">
-                <form target="_blank" action="https://formsubmit.co/adekiigbeadedeji10@gmail.com" method="POST">
-                    <div class="form-group">
-                        <div class="form-row">
-                            <div class="col">
-                                <input type="text" name="name" class="form-control" placeholder="Full Name" required>
-                            </div>
-                            <div class="col">
-                                <input type="email" name="email" class="form-control" placeholder="Email Address"
-                                    required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required>
-                        </textarea>
-                    </div>
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next"
-                        value="https://adedejifour20.github.io/My-Portfolio/thank-you.html">
-                    <input type="hidden" name="_template" value="table">
-                    <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
-                </form>
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service">
+                <h3>Photography</h3>
+                <p>Capturing moments with precision and creativity.</p>
+            </div>
+            <div class="service">
+                <h3>Web Development</h3>
+                <p>Building websites that inspire and convert.</p>
+            </div>
+            <div class="service">
+                <h3>Branding</h3>
+                <p>Helping businesses stand out with unique identities.</p>
             </div>
         </div>
     </section>
 
-    </div>
-    <div class="social-media">
-        <a href="https://www.instagram.com/adedejisworld/" target="_blank">
-            <img src="images/instagram-icon.png" alt="Instagram">
-        </a>
-        <a href="https://twitter.com/" target="_blank">
-            <img src="images/twitter-icon.png" alt="Twitter">
-        </a>
-        <a href="https://www.linkedin.com/" target="_blank">
-            <img src="images/linkedin-icon.png" alt="LinkedIn">
-        </a>
-    </div>
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h2>Our Portfolio</h2>
+        <div class="gallery">
+            <!-- Images will be dynamically populated -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="container">
+            <form target="_blank" action="https://formsubmit.co/adekiigbeadedeji10@gmail.com" method="POST">
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                        </div>
+                        <div class="col">
+                            <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" class="form-control" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="button">Send Message</button>
+            </form>
+        </div>
     </section>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Adedeji's Portfolio. Designed with ❤️.</p>
+        <p>© 2025 Deji Digital Solutions. All Rights Reserved.</p>
     </footer>
 
-    <!-- Lightbox Script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
-
 </html>

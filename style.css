@@ -1,257 +1,100 @@
-/* General Styles */
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #fff;
-    /* Keeps the background clean */
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #007BFF; /* Vibrant blue */
+    color: white;
     padding: 10px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-}
-
-header nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header nav a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     margin: 0 15px;
-    font-weight: bold;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 header nav a:hover {
-    color: #f9c74f;
-    /* Gold color on hover */
+    color: #FFA500; /* Bright orange */
 }
 
-/* Hero Section */
-.hero {
+/* Section Styles */
+section {
+    padding: 60px 20px;
     text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(to bottom, #f9c74f, #f9844a);
-    color: white;
 }
 
-.hero h1 {
-    font-size: 3rem;
+section h2 {
+    font-size: 2.5rem;
     margin-bottom: 15px;
+    color: #007BFF;
+    animation: fadeIn 1s ease-in-out;
 }
 
-.hero p {
-    font-size: 1.5rem;
-}
-
-/* About Section */
-#about {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f9f3ed;
-    color: #333;
-}
-
-#about h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-#about p {
+section p {
     font-size: 1rem;
+    margin: 10px auto;
+    line-height: 1.6;
+    max-width: 800px;
 }
 
-#about .button {
+/* Button Styles */
+.button {
     display: inline-block;
-    margin-top: 20px;
     padding: 10px 20px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #333;
+    background-color: #007BFF;
+    color: white;
     text-decoration: none;
+    font-weight: bold;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-#about .button:hover {
-    background-color: #f9c74f;
+.button:hover {
+    background-color: #FFA500;
+    transform: scale(1.05);
 }
 
-/* Gallery Section */
-#gallery {
-    padding: 50px 20px;
-    text-align: center;
-}
-
+/* Gallery Styles */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
-.gallery-item img {
+.gallery img {
     width: 100%;
     height: auto;
-    cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Testimonials Section */
-#testimonials {
-    padding: 50px 20px;
-    background-color: #f9f3ed;
-    color: #333;
-    text-align: center;
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-#testimonials h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.testimonials-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-blockquote {
-    max-width: 300px;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-style: italic;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-blockquote p {
-    font-size: 1rem;
-    color: #555;
-}
-
-blockquote cite {
-    display: block;
-    margin-top: 10px;
-    font-size: 0.9rem;
-    color: #333;
-}
-
-/* Contact Section */
-#contact {
-    padding: 50px 20px;
-    background-color: #fff;
-    text-align: center;
-}
-
-#contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-#contact form input,
-#contact form textarea,
-#contact form button {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#contact form button {
-    background-color: #333;
-    color: #fff;
-    cursor: pointer;
-}
-
-#contact form button:hover {
-    background-color: #f9c74f;
-}
-
-/* Social Media Icon Styles */
-.social-media {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.social-media a {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-.social-icon {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease;
-}
-
-.social-icon:hover {
-    transform: scale(1.1);
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #333;
-    color: #fff;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header nav {
-        flex-wrap: wrap;
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
-
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
-
-    .testimonials-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-/* Lightbox */
-.lightbox {
-    position: fixed;
-    /* Fix it in the viewport */
-    top: 50%;
-    /* Center vertically */
-    left: 50%;
-    /* Center horizontally */
-    transform: translate(-50%, -50%);
-    /* Offset to truly center */
-    background: rgba(0, 0, 0, 0.8);
-    /* Dark background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    z-index: 1000;
-}
-
-.lightbox img {
-    max-width: 90vw;
-    /* Adjust to fit viewport width */
-    max-height: 90vh;
-    /* Adjust to fit viewport height */
-    border: 3px solid #fff;
-    /* Optional: white border for a cleaner look */
-    border-radius: 10px;
 }
